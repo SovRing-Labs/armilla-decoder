@@ -1,0 +1,3 @@
+{"ops": 20000000, "native_ns_per_op": 8.04, "armilla_ns_per_op": 11.67, "ratio": 1.45, "results_equal_native": true, "guard_alarms_clean": 0, "faults_injected": 285714, "faults_caught": 285714}
+{"ops": 20000000, "native_ns_per_op": 8.13, "armilla_ns_per_op": 11.44, "ratio": 1.41, "results_equal_native": true, "guard_alarms_clean": 0, "faults_injected": 285714, "faults_caught": 285714}
+{"ops": 20000000, "native_ns_per_op": 8.04, "armilla_ns_per_op": 11.11, "ratio": 1.38, "results_equal_native": true, "guard_alarms_clean": 0, "faults_injected": 285714, "faults_caught": 285714}

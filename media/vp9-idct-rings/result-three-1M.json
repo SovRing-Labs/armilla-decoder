@@ -1,0 +1,1 @@
+{"probe":"vp9-idct8-three-groups","vectors":1000000,"mismatches":0,"clean_false_alarms":0,"three_s":8.4369,"ratio_vs_plain":175.96,"ns_per_vec":8436.9,"faults_injected":200000,"faults_detected":197630,"outputs_correct_after_vote":182866,"outputs_wrong":17134,"wrong_by_group_ABC":[0, 0, 17134],"injected_by_group_ABC":[66775, 66447, 66778]}

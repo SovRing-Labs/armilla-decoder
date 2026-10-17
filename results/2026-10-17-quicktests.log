@@ -1,0 +1,73 @@
+Command: each runnable suite.json verify; Intel i5-8365U laptop; 2026-10-17
+
+COMMAND V1: PYTHONDONTWRITEBYTECODE=1 python3 tests/check.py h264
+{
+ "blocks": 129600,
+ "frame": "1080p luma 4x4 blocks",
+ "t_plain_numpy_s": 0.086,
+ "clean": {
+  "mismatching_samples": 0,
+  "t_s": 14.97,
+  "values_repaired_by_vote": 0,
+  "no_majority_detected": 0
+ },
+ "fault_1pct_blocks_per_stage": {
+  "mismatching_samples": 1,
+  "t_s": 14.2,
+  "values_repaired_by_vote": 5922,
+  "no_majority_detected": 4
+ },
+ "fault_10pct": {
+  "mismatching_samples": 113,
+  "t_s": 15.03,
+  "values_repaired_by_vote": 58817,
+  "no_majority_detected": 175
+ },
+ "ring_vs_plain_numpy_slowdown": 174.0,
+ "frames_per_s_luma_ring_numpy": 0.07
+}
+
+PASS h264
+V1 PASS exit=0
+
+COMMAND V2: python3 tests/check.py negative
+PASS negative
+V2 PASS exit=0
+
+COMMAND V3: python3 tests/check.py vp9
+{"probe":"vp9-idct8-three-groups","vectors":200000,"mismatches":0,"clean_false_alarms":0,"three_s":3.4689,"ratio_vs_plain":151.59,"ns_per_vec":17344.3,"faults_injected":200000,"faults_detected":197630,"outputs_correct_after_vote":182866,"outputs_wrong":17134,"wrong_by_group_ABC":[0, 0, 17134],"injected_by_group_ABC":[66775, 66447, 66778]}
+{"fault_injection":200000,"outputs_changed":199895,"caught_by_routed_rings":199895}
+{"probe":"vp9-idct8-routed","vectors":200000,"mismatches":0,"ring_disagreements":0,"routed_s":0.2195,"ratio_vs_plain":9.59,"routed_ns_per_vec":1097.6}
+{"probe":"vp9-idct8-rings","vectors":200000,"ops":13,"mismatches":0,"plain_s":0.0229,"rings_s":0.5309,"ratio":23.2,"plain_ns_per_vec":114.4,"rings_ns_per_vec":2654.5,"checksum":8798644}
+
+PASS vp9
+V3 PASS exit=0
+
+COMMAND V4: python3 tests/check.py jsnum
+{"op":"add","cases":20000,"mismatches":0,"first_mismatch":"None","armilla_ns":1765.6,"native_ns":5.34,"acc":9223584923340695232}
+{"op":"sub","cases":20000,"mismatches":0,"first_mismatch":"None","armilla_ns":1730.9,"native_ns":7.55,"acc":9223584923340695232}
+{"op":"mul","cases":20000,"mismatches":0,"first_mismatch":"None","armilla_ns":1266.5,"native_ns":5.11,"acc":9223584923340695232}
+{"op":"div","cases":20000,"mismatches":0,"first_mismatch":"None","armilla_ns":1730.4,"native_ns":6.05,"acc":9223584923340695232}
+{"op":"and","cases":20000,"mismatches":0}
+{"op":"or","cases":20000,"mismatches":0}
+{"op":"xor","cases":20000,"mismatches":0}
+{"op":"shl","cases":20000,"mismatches":0}
+{"op":"sar","cases":20000,"mismatches":0}
+{"op":"shr","cases":20000,"mismatches":0}
+{"op":"lt","cases":20000,"mismatches":0}
+{"guard_checks_clean":246463,"guard_alarms_clean":0}
+{"faults_injected_runs":"≤500000 finite","outputs_changed":14173,"caught_by_routing_rings":14173}
+
+PASS jsnum
+V4 PASS exit=0
+
+COMMAND V5: python3 tests/check.py fast
+{"ops": 1000000, "native_ns_per_op": 27.49, "armilla_ns_per_op": 40.80, "ratio": 1.48, "results_equal_native": true, "guard_alarms_clean": 0, "faults_injected": 14286, "faults_caught": 14286}
+
+PASS fast
+V5 PASS exit=0
+V6 EXTERNAL echo "External: renderer revision 4b015c8 and real app/media prerequisites"
+
+COMMAND V7: python3 tests/check.py vp9negative
+PASS vp9negative
+V7 PASS exit=0

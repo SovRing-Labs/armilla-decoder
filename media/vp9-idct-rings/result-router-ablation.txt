@@ -1,0 +1,6 @@
+fixed        8.69 wrong 0 group_busy [0.0965, 0.0982, 0.107]
+fixed+paths  10.9 wrong 0 group_busy [0.0725, 0.0547, 0.065]
+routed       10.52 wrong 0 group_busy [0.0423, 0.0585, 0.0792]
+fixed        8.6 wrong 0 group_busy [0.1036, 0.0812, 0.1076]
+fixed+paths  10.74 wrong 0 group_busy [0.0624, 0.0584, 0.0595]
+routed       11.52 wrong 0 group_busy [0.0429, 0.0402, 0.0677]

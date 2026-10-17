@@ -1,0 +1,10 @@
+[package]
+name = "vp9-idct-rings"
+version = "0.1.0"
+edition = "2021"
+[profile.release]
+opt-level = 3
+codegen-units = 1
+
+[dependencies]
+libc = "0.2"

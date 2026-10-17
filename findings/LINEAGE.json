@@ -1,0 +1,56 @@
+{
+  "unit": "armilla-decoder",
+  "code_ownership": "Juan Carlos De Santiago / Sovereign Raptor fleet; own source only",
+  "files": [
+    {
+      "file": "common.py",
+      "source": "projects/armilla/waves/common.py",
+      "source_sha256": "723c1c6734bd2acc07213a5f2056870924a2c459f67c0de7f7181d39401be432",
+      "sha256": "723c1c6734bd2acc07213a5f2056870924a2c459f67c0de7f7181d39401be432",
+      "transformation": "byte-identical own source"
+    },
+    {
+      "file": "phase.py",
+      "source": "projects/armilla/waves/phase.py",
+      "source_sha256": "898c2b964e3812efcb83884eeae77153072945dfbfb36836e27d1482cb6ee455",
+      "sha256": "898c2b964e3812efcb83884eeae77153072945dfbfb36836e27d1482cb6ee455",
+      "transformation": "byte-identical own source"
+    }
+  ],
+  "omitted": "full gates, recorded corpus/model, benchmark drivers, private decryption/default signing fixtures, audio adapter and current browser",
+  "historical": {
+    "hybrid": {
+      "checks": 5482,
+      "scope": "owner; parent verified",
+      "gate_id": "gate-baseline-reference-backends-integration-benchmark-1792237940947580855.json",
+      "gate_sha256": "c3b29482b8ba6d6798ebce7c6d838c4f04fbc9bf55c23391cb2286644ad85d66",
+      "report_sha256": "ffaa6021400c58ce7439f64ee837f31ac3240946ef26484919e0f8be1fe64d66",
+      "reproduction": "EXTERNAL frozen research workspace/prerequisites; not reproduced by release smoke"
+    },
+    "waves": {
+      "checks": 2018,
+      "scope": "parent independent",
+      "gate_id": "gate-replay-phase-observe-convergence-1792243444032445218.json",
+      "gate_sha256": "74456f03b31ec28f5ae3f6f28e9f90f200dcf00a40169f251b239a57078167fa",
+      "report_sha256": "c92bd84fa946de748393164d81c8da15139698e75400f6c3a315b0ba24e3858f",
+      "reproduction": "EXTERNAL frozen research workspace/prerequisites; not reproduced by release smoke"
+    },
+    "he": {
+      "checks": 1364,
+      "scope": "parent independent",
+      "gate_id": "gate-paillier-polynomial-packed-freshness-defense-1792261417331512551.json",
+      "gate_sha256": "c9817a1cf75fbab2641232f370e0899495bcf5abad8d1caf04d7a6413c0243c5",
+      "report_sha256": "302b30447124a8dc93cfa91f8713bb44c587574dccfd408d3a54d541456d0b84",
+      "reproduction": "EXTERNAL frozen research workspace/prerequisites; not reproduced by release smoke"
+    },
+    "audio": {
+      "checks": 62396,
+      "scope": "worker engineering only; scientific targets unmet",
+      "gate_id": "gate-baseline-contract-reference-frontend-retrieval-stream-heldout-benchmark-1792240701296792604.json",
+      "gate_sha256": "aebb7d317716785e78ef758c106ad6a74574e75b70284f1248b471d793f7e496",
+      "report_sha256": "1d0ac9d6fceec0abeb3ab8516de55526589d11a026afd5367081d0949d34e03b",
+      "reproduction": "EXTERNAL frozen research workspace/prerequisites; not reproduced by release smoke"
+    }
+  },
+  "portable_smoke_is_full_gate": false
+}

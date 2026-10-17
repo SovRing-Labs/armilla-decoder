@@ -1,0 +1,21 @@
+# armilla-decoder
+
+> Exact decoder mathematics on residue rings
+
+Setup: `git clone --depth 1 https://github.com/SovRing-Labs/armilla-decoder && cd armilla-decoder && python3 -m venv .venv && . .venv/bin/activate && python -m pip install -q numpy && PYTHONDONTWRITEBYTECODE=1 python3 tests/check.py h264` (expect: PASS).
+Status: pre-alpha, under development — read STATUS.md before relying on a number.
+Licence: PolyForm Small Business 1.0.0 OR PolyForm Noncommercial 1.0.0 + Free Trial; CC BY 4.0 documents.
+
+## Docs
+- [README.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/README.md)
+- [STATUS.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/STATUS.md)
+- [suite.json](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/suite.json)
+- [TECHNICAL-DISCLOSURE.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/TECHNICAL-DISCLOSURE.md)
+- [PROVENANCE.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/PROVENANCE.md)
+- [LICENSING.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/LICENSING.md)
+- [DATA.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/DATA.md)
+- [CITATION.cff](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/CITATION.cff)
+- [AGENTS.md](https://raw.githubusercontent.com/SovRing-Labs/armilla-decoder/main/AGENTS.md)
+
+## Optional
+- [SovRing umbrella (all repos, MCP setup)](https://github.com/SovRing-Labs/SovRing)

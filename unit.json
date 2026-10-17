@@ -1,0 +1,21 @@
+{
+  "repo": "armilla-decoder",
+  "group": "armilla",
+  "lang": "Python / Rust / C",
+  "stage": "about 30 %",
+  "needs": [
+    "python3",
+    "numpy",
+    "rustc",
+    "cargo",
+    "cc"
+  ],
+  "deps": "",
+  "quicktest": "PYTHONDONTWRITEBYTECODE=1 python3 tests/check.py h264",
+  "expect": "PASS",
+  "gui": "bash install.sh",
+  "licence": "PolyForm Small Business 1.0.0 OR PolyForm Noncommercial 1.0.0 + Free Trial; CC BY 4.0 documents",
+  "pip": [
+    "numpy"
+  ]
+}

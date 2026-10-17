@@ -1,0 +1,216 @@
+{
+  "_about": {
+    "repo": "armilla-decoder",
+    "url": "https://github.com/SovRing-Labs/armilla-decoder",
+    "one_line": "Exact decoder mathematics on residue rings",
+    "quicktest": "PYTHONDONTWRITEBYTECODE=1 python3 tests/check.py h264",
+    "quicktest_s": 110,
+    "licence": "PolyForm Small Business 1.0.0 OR PolyForm Noncommercial 1.0.0 + Free Trial; CC BY 4.0 documents",
+    "status_file": "STATUS.md",
+    "generated": "2026-10-17",
+    "schema": 1
+  },
+  "tests": [
+    {
+      "id": "V1",
+      "title": "H.264 transform and injected-fault negative",
+      "claim": "129600 synthetic blocks match the integer twin cleanly; faults can produce wrong samples.",
+      "kind": "run",
+      "verify": "PYTHONDONTWRITEBYTECODE=1 python3 tests/check.py h264",
+      "expect": "PASS",
+      "evidence": [
+        "media/idct_rings.py",
+        "media/idct-rings.json",
+        "results/2026-10-17-quicktests.log"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "numpy"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "129600 synthetic blocks match the integer twin cleanly; faults can produce wrong samples. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V2",
+      "title": "Historical slowdown and fault failures",
+      "claim": "Historical 134.1x slowdown; 1 and 113 mismatching samples under injected faults.",
+      "kind": "file",
+      "verify": "python3 tests/check.py negative",
+      "expect": "PASS",
+      "evidence": [
+        "media/idct-rings.json",
+        "results/2026-10-17-quicktests.log"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "numpy"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "Historical 134.1x slowdown; 1 and 113 mismatching samples under injected faults. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V3",
+      "title": "VP9 8-point inverse transform",
+      "claim": "200000 synthetic vectors match the plain integer twin; fault-injection loops exercise the full labelled 200000 cases.",
+      "kind": "run",
+      "verify": "python3 tests/check.py vp9",
+      "expect": "PASS",
+      "evidence": [
+        "media/vp9-idct-rings/src/main.rs",
+        "results/2026-10-17-quicktests.log"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "rustc"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "10000 synthetic vectors match the plain integer twin. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V4",
+      "title": "JS-number arithmetic on rings",
+      "claim": "20000 random pairs plus edge cases per operation match the native binary64 twin.",
+      "kind": "run",
+      "verify": "python3 tests/check.py jsnum",
+      "expect": "PASS",
+      "evidence": [
+        "jsnum/src/lib.rs",
+        "jsnum/src/bin/verify.rs",
+        "results/2026-10-17-quicktests.log"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "cargo",
+        "rustc"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "20000 random pairs plus edge cases per operation match the native binary64 twin. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V5",
+      "title": "JS int32 guarded chains",
+      "claim": "1000000 operations match native; injected faults caught.",
+      "kind": "run",
+      "verify": "python3 tests/check.py fast",
+      "expect": "PASS",
+      "evidence": [
+        "jsnum/fast_probe.c",
+        "results/2026-10-17-quicktests.log"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "cc"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "1000000 operations match native; injected faults caught. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V6",
+      "title": "Renderer wiring prerequisite",
+      "claim": "ARMILLA-WIRE-0 is a separately licensed renderer integration, outside this workload export.",
+      "kind": "external",
+      "verify": "echo \"External: renderer revision 4b015c8 and real app/media prerequisites\"",
+      "expect": "PASS",
+      "evidence": [
+        "PROVENANCE.md",
+        "STATUS.md"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "omni-render renderer at 4b015c8",
+        "media and app integration harness"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "ARMILLA-WIRE-0 is a separately licensed renderer integration, outside this workload export. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Small deterministic workload; no general security or codec-conformance claim."
+    },
+    {
+      "id": "V7",
+      "title": "VP9 three-group fault negative",
+      "claim": "Historical three-group VP9 probe has 17134 wrong outputs under 200000 injected faults.",
+      "kind": "file",
+      "verify": "python3 tests/check.py vp9negative",
+      "expect": "PASS",
+      "evidence": [
+        "media/vp9-idct-rings/result-three-1M.json",
+        "tests/check.py"
+      ],
+      "runtime_s": 110,
+      "needs": [
+        "python3",
+        "numpy"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "Historical 134.1x slowdown; 1 and 113 mismatching samples under injected faults. Passing validates only the stated check.",
+      "how_we_got_it": "Intel i5-8365U laptop; 2026-10-17; command in verify, output in the dated results log. Historical measurements are explicitly marked in STATUS.md.",
+      "use_in_your_work": "Reproduce the arithmetic and compare with your reference before using the workload.",
+      "honest_limits": "Fault injection into group C can corrupt results; not a fault-proof decoder."
+    },
+    {
+      "id": "FINDINGS1",
+      "title": "2026-10-17 portable Armilla subset",
+      "claim": "Selected relocated own-source APIs and tiny independent oracles pass; full research/science remains separate.",
+      "kind": "run",
+      "verify": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 findings/smoke.py",
+      "expect": "PASS",
+      "evidence": [
+        "FINDINGS-2026-10-17.md",
+        "findings/LINEAGE.json",
+        "findings/smoke.py"
+      ],
+      "runtime_s": 20,
+      "needs": [
+        "python3",
+        "numpy"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "Runs source-only controls on synthetic public values with no private corpus, secret key files or research tree imports.",
+      "how_we_got_it": "2026-10-17 isolated temporary staging; selected exact own-source runtimes, explicit relocation/extraction in LINEAGE.json; result bound to authored hashes.",
+      "use_in_your_work": "Inspect and rerun the small typed API boundaries before adapting them to your own public inputs.",
+      "honest_limits": "Portable smoke is not all1364/2018/5482/62396 checks; no security, FHE, production deployment, acoustic accuracy or speed claim."
+    },
+    {
+      "id": "FINDINGS2",
+      "title": "Full frozen research gates are external",
+      "claim": "Historical hybrid5482, wave2018 and HE1364 have scoped independent review; audio62396 is worker engineering evidence only.",
+      "kind": "external",
+      "verify": "echo \"EXTERNAL: original frozen research workspace, source pins and fixture prerequisites required; portable subset is FINDINGS1\"",
+      "expect": "EXTERNAL",
+      "evidence": [
+        "FINDINGS-2026-10-17.md",
+        "findings/LINEAGE.json"
+      ],
+      "runtime_s": 240,
+      "needs": [
+        "external frozen research workspace and explicit fixture prerequisites"
+      ],
+      "cpu_flags": [],
+      "what_it_means": "This release does not execute the full original gates or reproduce scientific measurements.",
+      "how_we_got_it": "Original gate identity and report SHA256 are preserved in findings/LINEAGE.json, with review scope.",
+      "use_in_your_work": "Use the portable subset locally; obtain separately authorized prerequisites for full research reproduction.",
+      "honest_limits": "Audio scientific accuracy/speed/compression targets remain negative; public polynomial toy is not FHE; no deployment/security promotion."
+    }
+  ]
+}

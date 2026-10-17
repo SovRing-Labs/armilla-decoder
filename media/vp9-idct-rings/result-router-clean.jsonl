@@ -1,0 +1,3 @@
+{"plain_s_1thread":0.0264,"class_counts_dense_sparse_dc":[9036, 10755, 12609],"cost_us_dense_sparse_dc_diamond0":[14.20,8.98,2.85],"faults_injected":0}
+{"mode":"fixed","blocks_wrong":0,"corrected_in_place":0,"recomputed":0,"final_checksum_failures":0,"wall_s":0.1307,"frames_per_s":7.65,"diamond_busy_s_max":0.1023,"diamond_busy_s_min":0.0777,"blocks_per_diamond":[3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600]}
+{"mode":"routed","blocks_wrong":0,"corrected_in_place":0,"recomputed":0,"final_checksum_failures":0,"wall_s":0.0942,"frames_per_s":10.61,"diamond_busy_s_max":0.0783,"diamond_busy_s_min":0.0311,"blocks_per_diamond":[3624, 3640, 3536, 3728, 2924, 4148, 3723, 3711, 3366]}

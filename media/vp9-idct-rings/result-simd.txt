@@ -1,0 +1,12 @@
+layout B fixed    15.22 wrong 0 fixed 2487 recomp 741 cksum 0
+layout B direct   17.62 wrong 0 fixed 2468 recomp 760 cksum 0
+layout B simplex  20.19 wrong 0 fixed 2461 recomp 767 cksum 0
+layout B fixed    15.56 wrong 0 fixed 2487 recomp 741 cksum 0
+layout B direct   13.26 wrong 0 fixed 2459 recomp 769 cksum 0
+layout B simplex  17.64 wrong 0 fixed 2468 recomp 760 cksum 0
+layout A fixed    17.6 wrong 0 fixed 2487 recomp 741 cksum 0
+layout A direct   20.58 wrong 0 fixed 2474 recomp 754 cksum 0
+layout A simplex  18.63 wrong 0 fixed 2475 recomp 753 cksum 0
+layout A fixed    17.99 wrong 0 fixed 2487 recomp 741 cksum 0
+layout A direct   20.67 wrong 0 fixed 2471 recomp 757 cksum 0
+layout A simplex  18.15 wrong 0 fixed 2466 recomp 762 cksum 0

@@ -1,0 +1,25 @@
+{
+ "blocks": 129600,
+ "frame": "1080p luma 4x4 blocks",
+ "t_plain_numpy_s": 0.0474,
+ "clean": {
+  "mismatching_samples": 0,
+  "t_s": 6.35,
+  "values_repaired_by_vote": 0,
+  "no_majority_detected": 0
+ },
+ "fault_1pct_blocks_per_stage": {
+  "mismatching_samples": 1,
+  "t_s": 5.98,
+  "values_repaired_by_vote": 5922,
+  "no_majority_detected": 4
+ },
+ "fault_10pct": {
+  "mismatching_samples": 113,
+  "t_s": 5.41,
+  "values_repaired_by_vote": 58817,
+  "no_majority_detected": 175
+ },
+ "ring_vs_plain_numpy_slowdown": 134.1,
+ "frames_per_s_luma_ring_numpy": 0.16
+}

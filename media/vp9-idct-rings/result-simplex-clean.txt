@@ -1,0 +1,10 @@
+fixed        9.12 wrong 0 bottleneck g/d 1.33 1.45
+direct       11.09 wrong 0 bottleneck g/d 1.0 1.02
+simplex      11.62 wrong 0 bottleneck g/d 1.01 1.03
+random-keys  6.71 wrong 0 bottleneck g/d 2.27 6.07
+{'agreement_with_direct_system': {'simplex': 0.037, 'random_keys': 0.016}, 'agreement_with_direct_diamond': {'simplex': 0.176, 'random_keys': 0.204}}
+fixed        8.67 wrong 0 bottleneck g/d 1.33 1.43
+direct       11.0 wrong 0 bottleneck g/d 1.0 1.01
+simplex      11.06 wrong 0 bottleneck g/d 1.01 1.03
+random-keys  6.56 wrong 0 bottleneck g/d 2.13 5.58
+{'agreement_with_direct_system': {'simplex': 0.043, 'random_keys': 0.018}, 'agreement_with_direct_diamond': {'simplex': 0.218, 'random_keys': 0.202}}

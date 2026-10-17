@@ -1,0 +1,13 @@
+{"op":"add","cases":2000000,"mismatches":0,"first_mismatch":"None","armilla_ns":334.7,"native_ns":2.46,"acc":1414071465453429}
+{"op":"sub","cases":2000000,"mismatches":0,"first_mismatch":"None","armilla_ns":333.5,"native_ns":2.41,"acc":1414071465453429}
+{"op":"mul","cases":2000000,"mismatches":0,"first_mismatch":"None","armilla_ns":437.2,"native_ns":2.78,"acc":1414071465453429}
+{"op":"div","cases":2000000,"mismatches":0,"first_mismatch":"None","armilla_ns":787.2,"native_ns":2.51,"acc":1414071465453429}
+{"op":"and","cases":2000000,"mismatches":0}
+{"op":"or","cases":2000000,"mismatches":0}
+{"op":"xor","cases":2000000,"mismatches":0}
+{"op":"shl","cases":2000000,"mismatches":0}
+{"op":"sar","cases":2000000,"mismatches":0}
+{"op":"shr","cases":2000000,"mismatches":0}
+{"op":"lt","cases":2000000,"mismatches":0}
+{"guard_checks_clean":24898521,"guard_alarms_clean":0}
+{"faults_injected_runs":"≤500000 finite","outputs_changed":358210,"caught_by_routing_rings":358210}
